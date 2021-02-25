@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="author" content="Gurpreet Mann">
-  <meta name="description" content="A personal portfolio for my work in UI and UX design">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gurpreet Mann</title>
-  <link href="favicon.ico" rel="shortcut icon">
+     <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <!-- For the header -->
   <header>
-    <div>
-      <img src="img/logo.png" alt="GurpreetMannlogo">
-      <nav>
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div id="logo">
+      <img src="img/logo.svg" alt="GurpreetMannlogo">
     </div>
+        <nav id="_navlinks" class="navlinks">
+                  <a href="index.html" class="active_tab">Work</a>
+                  <a href="about.html">About</a>
+                  <a href="#contact" onclick="menuToggle()">Contact</a>
+      </nav>
   </header>
   <main>
-    <div></div>
-    <div></div>
+    <div id="welcome_section:"></div>
+    <div id="hero-section"></div>
     <h1>
       Hi, I am Gurpreet Mann.
       <span> I am UI/UX Designer from San Francisco, CA! </span>
@@ -35,19 +34,14 @@
     <div></div>
     <!--End Hero-->
     <!--Work-->
-    <div></div>
+    <div id="my_work_section">
     <h2> My Work </h2>
-    <div>
-      <!-- open row that holds (2) columns for project -->
-      <div>
-        <!-- open first column (used for image) -->
+      <div id="my-work">
+       <div id="project_card">
         <picture>
           <source srcset="img/plantverse/5_card@1x.jpg" media="(max-width:767px)">
           <img src="img/plantverse/5_card@2x.jpg" alt="Plantverse Mockup">
         </picture>
-      </div><!-- end first column -->
-      <div>
-        <!-- open second column (used for text) -->
         <h3>Plantverse</h3><!-- heading for the project -->
         <p>
           <!-- open paragraph -->
@@ -59,18 +53,15 @@
           My role in this project was Product Designer. I completed user research, user inteviews, wireframing, mock-ups,
           and usablity testing for the entire project.
         </p><!-- end paragraph -->
-      <li><a href="plantverse.html"> See More</a></li><!-- button or link label -->
+      <a class="button" href="plantverse.html">See More</a><!-- button or link label -->
       </div><!-- end second column -->
     </div><!-- end row that holds (2) columns for project -->
-    <div>
-      <!-- open row that holds (2) columns for project -->
-      <div>
+     <div id="project_card">
         <!-- open first column (used for image) -->
         <picture>
           <source srcset="img/chefish/mockup-1@1x.jpg" media="(max-width:767px)">
           <img src="img/chefish/mockup-1@2x.jpg" alt="Chefish Reciepe App Mockup">
         </picture>
-      </div><!-- end first column -->
       <div>
         <!-- open second column (used for text) -->
         <h3>Chefish</h3><!-- heading for the project -->
@@ -84,40 +75,36 @@
           My role in this project was Product Designer. I completed user research, user inteviews, wireframing, mock-ups,
           and usablity testing for the entire project.
         </p><!-- end paragraph -->
-        <a href="">Read more</a><!-- button or link label -->
-      </div><!-- end second column -->
-    </div><!-- end row that holds (2) columns for project -->
+        <a class="button" href="">See More</a><!-- button or link label -->
+        </div><!-- end second column -->
+      </div><!-- end row that holds (2) columns for project -->
   </main>
   <footer>
+    <h1>Looking for a designer?</h1>
+    <p>I can help you create dynamic user-centered digital products that surpass customer needs.<br>
+        Reach out to me via email or on LinkedIn, and I'll get back to you.
+    </p>
+    <a href="mailto:gkmannx@gmail.com" class="button contact">Send Email</a>
     <div>
-      <div>
-        <h2>Get in Touch</h2>
-        <p>
-          Do you like my work and want to discuss opportunities or just want to chat about latest design trends? Please get in touch.</p>
-      </div>
-      <div>
-        <a href="mailto:gkmannx@gmail.com">Email me</a>
-        <div>
-          <ul>
-            <li><a href="https://linkedin.com/in/gmann-ux/" target="_blank"><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%"
-                  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <path
-                    d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm-80.037,399.871l0,-199.921l-66.464,0l0,199.921l66.464,0Zm239.62,0l0,-114.646c0,-61.409 -32.787,-89.976 -76.509,-89.976c-35.255,0 -51.047,19.389 -59.889,33.007l0,-28.306l-66.447,0c0.881,18.757 0,199.921 0,199.921l66.446,0l0,-111.65c0,-5.976 0.43,-11.95 2.191,-16.221c4.795,-11.935 15.737,-24.299 34.095,-24.299c24.034,0 33.663,18.34 33.663,45.204l0,106.966l66.45,0Zm-272.403,-296.321c-22.74,0 -37.597,14.95 -37.597,34.545c0,19.182 14.405,34.544 36.717,34.544l0.429,0c23.175,0 37.6,-15.362 37.6,-34.544c-0.43,-19.595 -14.424,-34.545 -37.149,-34.545Z">
-                  </path>
-                </svg></a></li>
-          </ul>
-          <a href="https://twitter.com/GKMANNUX" target="_blank">
-            <!-- Twitter icon -->
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
-              <path fill="none" d="M56 56h400v400H56z"></path>
+      <ul>
+        <li><a href="https://linkedin.com/in/gmann-ux/" target="_blank"><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%"
+              xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
               <path
-                d="M161.014 464.013c193.208 0 298.885-160.071 298.885-298.885 0-4.546 0-9.072-.307-13.578A213.737 213.737 0 00512 97.176a209.705 209.705 0 01-60.334 16.527 105.426 105.426 0 0046.182-58.102 210.548 210.548 0 01-66.703 25.498 105.184 105.184 0 00-76.593-33.112c-57.682 0-105.145 47.464-105.145 105.144 0 8.002.914 15.979 2.722 23.773-84.418-4.231-163.18-44.161-216.494-109.752-27.724 47.726-13.379 109.576 32.522 140.226A104.258 104.258 0 0120.48 194.23v1.331c.014 49.814 35.447 93.111 84.275 102.974a104.898 104.898 0 01-47.431 1.802c13.727 42.685 53.311 72.108 98.14 72.95a210.83 210.83 0 01-130.458 45.056A213.688 213.688 0 010 416.827a297.42 297.42 0 00161.014 47.104"
-                fill="#1da1f2" fill-rule="nonzero"></path>
-            </svg>
-          </a>
-        </div>
-        <div>© Gurpreet Mann 2021</div>
-      </div>
+                d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm-80.037,399.871l0,-199.921l-66.464,0l0,199.921l66.464,0Zm239.62,0l0,-114.646c0,-61.409 -32.787,-89.976 -76.509,-89.976c-35.255,0 -51.047,19.389 -59.889,33.007l0,-28.306l-66.447,0c0.881,18.757 0,199.921 0,199.921l66.446,0l0,-111.65c0,-5.976 0.43,-11.95 2.191,-16.221c4.795,-11.935 15.737,-24.299 34.095,-24.299c24.034,0 33.663,18.34 33.663,45.204l0,106.966l66.45,0Zm-272.403,-296.321c-22.74,0 -37.597,14.95 -37.597,34.545c0,19.182 14.405,34.544 36.717,34.544l0.429,0c23.175,0 37.6,-15.362 37.6,-34.544c-0.43,-19.595 -14.424,-34.545 -37.149,-34.545Z">
+              </path>
+            </svg></a></li>
+      </ul>
+      <a href="https://twitter.com/GKMANNUX" target="_blank">
+        <!-- Twitter icon -->
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+          <path fill="none" d="M56 56h400v400H56z"></path>
+          <path
+            d="M161.014 464.013c193.208 0 298.885-160.071 298.885-298.885 0-4.546 0-9.072-.307-13.578A213.737 213.737 0 00512 97.176a209.705 209.705 0 01-60.334 16.527 105.426 105.426 0 0046.182-58.102 210.548 210.548 0 01-66.703 25.498 105.184 105.184 0 00-76.593-33.112c-57.682 0-105.145 47.464-105.145 105.144 0 8.002.914 15.979 2.722 23.773-84.418-4.231-163.18-44.161-216.494-109.752-27.724 47.726-13.379 109.576 32.522 140.226A104.258 104.258 0 0120.48 194.23v1.331c.014 49.814 35.447 93.111 84.275 102.974a104.898 104.898 0 01-47.431 1.802c13.727 42.685 53.311 72.108 98.14 72.95a210.83 210.83 0 01-130.458 45.056A213.688 213.688 0 010 416.827a297.42 297.42 0 00161.014 47.104"
+            fill="#1da1f2" fill-rule="nonzero"></path>
+        </svg>
+      </a>
+    </div>
+    <p>© Gurpreet Mann 2021<p>
   </footer>
-</body>
-</html>
+  </body>
+  </html>
